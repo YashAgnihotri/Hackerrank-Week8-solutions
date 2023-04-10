@@ -1,0 +1,74 @@
+Problem 1:
+You have been given an array A of size N consisting of positive integers. You need to find and print the product of all the number in this array.
+Input Format
+The first line contains a single integer N denoting the size of the array. The next line contains N space separated integers denoting the elements of the array.
+Constraints
+NA
+Output Format
+Print a single integer denoting the product of all the elements of the array
+Sample Input 0
+5
+1 2 3 4 5
+Sample Output 0
+120
+__________________________________________________________________________________________________________________-
+solution 1:
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for (int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int prod=1;
+    for (int i=0;i<n;i++){
+        prod*=a[i];
+    }
+    printf("%d",prod);
+    return 0;
+}
+
+_____________________________________________________________________________________________________________________________
+Problem 2:
+You are provided an array A of size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit of all the N numbers is divisible by 10.
+Note: View the sample explanation section for more clarification.
+Input Format
+First line: A single integer N denoting the size of array A Second line: N space-separated integers.
+Constraints
+NA
+Output Format
+If the number is divisible by 10, then print Yes. Otherwise, print No.
+Sample Input 0
+5
+85 25 65 21 84
+Sample Output 0
+No
+Explanation 0
+Last digit of 85 is 5 Last digit of 25 is 5 Last digit of 65 is 5 Last digit of 21 is 1 Last digit of 84 is 4
+Therefore the number formed is 55514 which is not divisible by 10.
+_____________________________________________________________________________________________________________________________
+Solution 2:
+int main() {
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for (int i=0;i<=n;i++){
+        scanf("%d",&a[i]);
+    }
+    int y;
+    for (int i=0;i<n;i++){
+    y=y*10+(a[i]%10);
+    }
+    if (y%10==0){
+        printf("Yes");
+    }else{
+        printf("No");
+    }
+    
+    return 0;
+}
